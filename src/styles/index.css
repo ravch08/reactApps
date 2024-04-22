@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+section {
+  @apply py-24;
+}
+
+.btn-primary {
+  @apply bg-amber-600 px-12 py-2 text-white;
+}
+
+.btn-link {
+  @apply rounded-md bg-slate-400 px-12 py-2 transition-colors duration-500 ease-in-out hover:bg-slate-700 hover:text-white;
+}
+
+.btn-page {
+  @apply rounded-md bg-slate-400 px-4 py-2 text-sm transition-colors duration-500 ease-in-out hover:bg-slate-700 hover:text-white;
+}
+
+.btn-back {
+  @apply absolute right-10 top-5 bg-lime-500 px-8 py-2;
+}
+
+.main-heading {
+  @apply mb-12 mt-4 text-center text-5xl font-bold;
+}
+
+.active {
+  @apply bg-slate-700 text-white;
+}
+
+.input-primary {
+  @apply bg-slate-300 px-2 py-2 outline-none;
+}
+
+.search-res {
+  @apply p-2 transition-colors duration-200 ease-in-out hover:bg-slate-200;
+}
