@@ -10,6 +10,7 @@ import {
   Carousel,
   Counter,
   Country,
+  CreateCircles,
   Fetch,
   HexGenerator,
   Home,
@@ -46,6 +47,7 @@ const router = createBrowserRouter(
       <Route path="search-autocomplete" element={<SearchAutocomplete />} />
       <Route path="timer" element={<Timer />} />
       <Route path="modal" element={<ShowModal />} />
+      <Route path="create-circles" element={<CreateCircles />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

@@ -19,7 +19,7 @@ section {
 }
 
 .btn-back {
-  @apply absolute right-10 top-5 bg-lime-500 px-8 py-2;
+  @apply absolute right-10 top-5 z-50 bg-lime-500 px-8 py-2;
 }
 
 .main-heading {

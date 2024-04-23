@@ -6,7 +6,7 @@ type TPoint = {
   y: number;
 };
 
-const CreateCircles = () => {
+const SmileyTap = () => {
   const [points, setPoints] = useState<TPoint[]>([]);
   const [popped, setPopped] = useState<TPoint[]>([]);
 
@@ -76,4 +76,4 @@ const CreateCircles = () => {
   );
 };
 
-export default CreateCircles;
+export default SmileyTap;

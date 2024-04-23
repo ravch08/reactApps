@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="py-24">
+    <main className="h-screen py-56">
       <div className="container flex flex-wrap items-center justify-between gap-6">
         <Link to="carousel" className="btn-link">
           Carousel
@@ -48,6 +48,9 @@ const Home = () => {
         </Link>
         <Link to="modal" className="btn-link">
           Modal
+        </Link>
+        <Link to="create-circles" className="btn-link">
+          Create Circles
         </Link>
       </div>
     </main>
