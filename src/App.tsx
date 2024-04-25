@@ -11,6 +11,7 @@ import {
   Counter,
   Country,
   CreateCircles,
+  Expanse,
   Fetch,
   HexGenerator,
   Home,
@@ -48,6 +49,7 @@ const router = createBrowserRouter(
       <Route path="timer" element={<Timer />} />
       <Route path="modal" element={<ShowModal />} />
       <Route path="create-circles" element={<CreateCircles />} />
+      <Route path="expanse" element={<Expanse />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

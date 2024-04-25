@@ -11,6 +11,7 @@ export { default as Counter } from "../apps/Counter.tsx";
 export { default as Country } from "../apps/Country.tsx";
 export { default as Circle } from "../apps/CreateCircles/Circle.tsx";
 export { default as CreateCircles } from "../apps/CreateCircles/CreateCircles.tsx";
+export { default as Expanse } from "../apps/Expanse.tsx";
 export { default as Fetch } from "../apps/Fetch.tsx";
 export { default as HexGenerator } from "../apps/HexGenerator.tsx";
 export { default as NavTabs } from "../apps/NavTabs.tsx";

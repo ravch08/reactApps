@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 section {
-  @apply py-24;
+  @apply py-36;
 }
 
 .btn-primary {
@@ -31,9 +31,13 @@ section {
 }
 
 .input-primary {
-  @apply bg-slate-300 px-2 py-2 outline-none;
+  @apply rounded-md bg-slate-300 px-2 py-2 text-sm outline-none;
 }
 
 .search-res {
   @apply p-2 transition-colors duration-200 ease-in-out hover:bg-slate-200;
+}
+
+.form-control {
+  @apply my-4 flex items-center justify-between gap-4;
 }

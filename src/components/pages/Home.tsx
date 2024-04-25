@@ -52,6 +52,9 @@ const Home = () => {
         <Link to="create-circles" className="btn-link">
           Create Circles
         </Link>
+        <Link to="expanse" className="btn-link">
+          Expanse Tracker
+        </Link>
       </div>
     </main>
   );
