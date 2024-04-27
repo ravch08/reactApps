@@ -55,6 +55,9 @@ const Home = () => {
         <Link to="expanse" className="btn-link">
           Expanse Tracker
         </Link>
+        <Link to="tic-tac-toe" className="btn-link">
+          Tic Tac Toe
+        </Link>
       </div>
     </main>
   );

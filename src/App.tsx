@@ -24,6 +24,7 @@ import {
   ShowModal,
   SmileyTap,
   StarRating,
+  TicTacToe,
   Timer,
   TodoList,
 } from "./components/utils/helper";
@@ -50,6 +51,7 @@ const router = createBrowserRouter(
       <Route path="modal" element={<ShowModal />} />
       <Route path="create-circles" element={<CreateCircles />} />
       <Route path="expanse" element={<Expanse />} />
+      <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),
