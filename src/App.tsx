@@ -17,6 +17,7 @@ import {
   Home,
   Layout,
   NavTabs,
+  NestedTree,
   Page404,
   Pagination,
   Radio,
@@ -52,6 +53,7 @@ const router = createBrowserRouter(
       <Route path="create-circles" element={<CreateCircles />} />
       <Route path="expanse" element={<Expanse />} />
       <Route path="tic-tac-toe" element={<TicTacToe />} />
+      <Route path="nested-tree" element={<NestedTree />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

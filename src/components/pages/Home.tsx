@@ -58,6 +58,9 @@ const Home = () => {
         <Link to="tic-tac-toe" className="btn-link">
           Tic Tac Toe
         </Link>
+        <Link to="nested-tree" className="btn-link">
+          Nested Tree
+        </Link>
       </div>
     </main>
   );
