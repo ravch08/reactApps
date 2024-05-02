@@ -61,6 +61,9 @@ const Home = () => {
         <Link to="nested-tree" className="btn-link">
           Nested Tree
         </Link>
+        <Link to="sticky-notes" className="btn-link">
+          Sticky Notes
+        </Link>
       </div>
     </main>
   );

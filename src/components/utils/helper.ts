@@ -23,6 +23,8 @@ export { default as Radio } from "../apps/Radio.tsx";
 export { default as SearchAutocomplete } from "../apps/SearchAutocomplete.tsx";
 export { default as SmileyTap } from "../apps/SmileyTap.tsx";
 export { default as StarRating } from "../apps/StarRating.tsx";
+export { default as Note } from "../apps/StickyNotes/Note.tsx";
+export { default as StickyNotes } from "../apps/StickyNotes/StickyNotes.tsx";
 export { default as SingleSquare } from "../apps/TicTacToe/SingleSquare.tsx";
 export { default as TicTacToe } from "../apps/TicTacToe/TicTacToe.tsx";
 export { default as Timer } from "../apps/Timer.tsx";
