@@ -16,6 +16,7 @@ import {
   HexGenerator,
   Home,
   Layout,
+  LazyLoading,
   NavTabs,
   NestedTree,
   Page404,
@@ -56,6 +57,7 @@ const router = createBrowserRouter(
       <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="nested-tree" element={<NestedTree />} />
       <Route path="sticky-notes" element={<StickyNotes />} />
+      <Route path="lazy-loading" element={<LazyLoading />} />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

@@ -64,6 +64,9 @@ const Home = () => {
         <Link to="sticky-notes" className="btn-link">
           Sticky Notes
         </Link>
+        <Link to="lazy-loading" className="btn-link">
+          Lazy Loading
+        </Link>
       </div>
     </main>
   );

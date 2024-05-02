@@ -14,6 +14,8 @@ export { default as CreateCircles } from "../apps/CreateCircles/CreateCircles.ts
 export { default as Expanse } from "../apps/Expanse.tsx";
 export { default as Fetch } from "../apps/Fetch.tsx";
 export { default as HexGenerator } from "../apps/HexGenerator.tsx";
+export { default as LazyImage } from "../apps/LazyLoadingImages/LazyImage.tsx";
+export { default as LazyLoading } from "../apps/LazyLoadingImages/LazyLoading.tsx";
 export { default as NavTabs } from "../apps/NavTabs.tsx";
 export { default as MenuItem } from "../apps/NestedTree/MenuItem.tsx";
 export { default as MenuList } from "../apps/NestedTree/MenuList.tsx";
