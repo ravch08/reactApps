@@ -1,23 +1,6 @@
 import React, { useState } from "react";
+import { accordionData } from "../utils/data";
 import { BackToHome } from "../utils/helper";
-
-const accordionData = [
-  {
-    id: 1,
-    title: "Title 1",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores accusantium accusamus asperiores veniam repudiandae, quibusdam ex nihil sunt, quaerat consequuntur laboriosam natus aspernatur molestias porro nesciunt totam eveniet? Itaque, quaerat.`,
-  },
-  {
-    id: 2,
-    title: "Title 2",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores accusantium accusamus asperiores veniam repudiandae, quibusdam ex nihil sunt, quaerat consequuntur laboriosam natus aspernatur molestias porro nesciunt totam eveniet? Itaque, quaerat.`,
-  },
-  {
-    id: 3,
-    title: "Title 3",
-    content: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores accusantium accusamus asperiores veniam repudiandae, quibusdam ex nihil sunt, quaerat consequuntur laboriosam natus aspernatur molestias porro nesciunt totam eveniet? Itaque, quaerat.`,
-  },
-];
 
 const Accordion = () => {
   const [selected, setSelected] = useState<number | null>(null);

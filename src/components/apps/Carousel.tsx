@@ -1,23 +1,6 @@
 import { useState } from "react";
+import { carouselData } from "../utils/data";
 import { BackToHome } from "../utils/helper";
-
-const carouselData = [
-  {
-    id: 1,
-    title: "Image 1",
-    imgUrl: `https://images.unsplash.com/photo-1712313275295-105a8ab7bb1f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
-  },
-  {
-    id: 2,
-    title: "Image 2",
-    imgUrl: `https://images.unsplash.com/photo-1631261177958-b68a44d92a56?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
-  },
-  {
-    id: 3,
-    title: "Image 3",
-    imgUrl: `https://plus.unsplash.com/premium_photo-1669562728886-b2cc51a62e78?q=80&w=2123&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D`,
-  },
-];
 
 const Carousel = () => {
   const [index, setIndex] = useState(0);

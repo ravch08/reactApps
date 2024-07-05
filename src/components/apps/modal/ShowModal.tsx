@@ -6,9 +6,7 @@ import Overlay from "./Overlay";
 const ShowModal = () => {
   const [displayModal, setDisplayModal] = useState(false);
 
-  const handleDisplayModal = () => {
-    setDisplayModal(true);
-  };
+  const handleDisplayModal = () => setDisplayModal(true);
 
   const handleCloseModal = () => setDisplayModal(false);
 

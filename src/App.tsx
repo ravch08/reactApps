@@ -8,28 +8,36 @@ import {
 import {
   Accordion,
   Carousel,
+  CheckedTodoList,
+  CountReducer,
   Counter,
   Country,
   CreateCircles,
+  Debouncing,
   Expanse,
-  Fetch,
   HexGenerator,
   Home,
   Layout,
   LazyLoading,
+  LoadMoreData,
   NavTabs,
-  NestedTree,
   Page404,
   Pagination,
+  Password,
+  QRCodeGenerator,
   Radio,
+  RecursiveMenu,
+  ScrollIndicator,
   SearchAutocomplete,
   ShowModal,
   SmileyTap,
   StarRating,
+  StepCounter,
   StickyNotes,
   TicTacToe,
   Timer,
   TodoList,
+  Wordweb,
 } from "./components/utils/helper";
 import "./styles/App.css";
 
@@ -40,22 +48,30 @@ const router = createBrowserRouter(
       <Route path="carousel" element={<Carousel />} />
       <Route path="accordion" element={<Accordion />} />
       <Route path="hex-generator" element={<HexGenerator />} />
+      <Route path="debouncing" element={<Debouncing />} />
       <Route path="navtabs" element={<NavTabs />} />
       <Route path="counter" element={<Counter />} />
+      <Route path="count-reducer" element={<CountReducer />} />
+      <Route path="step-counter" element={<StepCounter />} />
       <Route path="country" element={<Country />} />
-      <Route path="fetch" element={<Fetch />} />
       <Route path="radio" element={<Radio />} />
       <Route path="pagination" element={<Pagination />} />
-      <Route path="todos" element={<TodoList />} />
+      <Route path="scroll-indicator" element={<ScrollIndicator />} />
+      <Route path="qr-code" element={<QRCodeGenerator />} />
+      <Route path="todolist" element={<TodoList />} />
+      <Route path="checked-todolist" element={<CheckedTodoList />} />
       <Route path="rating" element={<StarRating stars={5} />} />
       <Route path="smiley" element={<SmileyTap />} />
       <Route path="search-autocomplete" element={<SearchAutocomplete />} />
+      <Route path="load-more" element={<LoadMoreData />} />
       <Route path="timer" element={<Timer />} />
+      <Route path="wordweb" element={<Wordweb />} />
       <Route path="modal" element={<ShowModal />} />
+      <Route path="password" element={<Password />} />
+      <Route path="recursive-menu" element={<RecursiveMenu />} />
       <Route path="create-circles" element={<CreateCircles />} />
       <Route path="expanse" element={<Expanse />} />
       <Route path="tic-tac-toe" element={<TicTacToe />} />
-      <Route path="nested-tree" element={<NestedTree />} />
       <Route path="sticky-notes" element={<StickyNotes />} />
       <Route path="lazy-loading" element={<LazyLoading />} />
       <Route path="*" element={<Page404 />} />

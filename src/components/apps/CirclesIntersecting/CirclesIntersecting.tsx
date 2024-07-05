@@ -8,7 +8,7 @@ type CircleProps = {
   diameter: number;
 };
 
-const CreateCircles = () => {
+const CirclesIntersecting = () => {
   const [circles, setCircles] = useState<CircleProps[]>([]);
 
   function makeCircles(e: React.MouseEvent<HTMLElement, MouseEvent>) {
@@ -63,4 +63,4 @@ const CreateCircles = () => {
   );
 };
 
-export default CreateCircles;
+export default CirclesIntersecting;
