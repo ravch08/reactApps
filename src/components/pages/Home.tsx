@@ -41,6 +41,9 @@ const Home = () => {
           <Link to="debouncing" className="btn-link">
             Debounce & Fetch
           </Link>
+          <Link to="carousel-reducer" className="btn-link">
+            Carousel using Reducer
+          </Link>
           <Link to="pagination" className="btn-link">
             Pagination
           </Link>

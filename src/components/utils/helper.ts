@@ -8,6 +8,7 @@ export { default as Page404 } from "../pages/Page404.tsx";
 
 export { default as Accordion } from "../apps/Accordion.tsx";
 export { default as Carousel } from "../apps/Carousel.tsx";
+export { default as CarouselUsingReducer } from "../apps/CarouselUsingReducer.tsx";
 export { default as CheckedTodoList } from "../apps/CheckedTodoList.tsx";
 export { default as Circle } from "../apps/CirclesIntersecting/Circle.tsx";
 export { default as CreateCircles } from "../apps/CirclesIntersecting/CirclesIntersecting.tsx";

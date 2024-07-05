@@ -8,6 +8,7 @@ import {
 import {
   Accordion,
   Carousel,
+  CarouselUsingReducer,
   CheckedTodoList,
   CountReducer,
   Counter,
@@ -76,6 +77,7 @@ const router = createBrowserRouter(
       <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="sticky-notes" element={<StickyNotes />} />
       <Route path="lazy-loading" element={<LazyLoading />} />
+      <Route path="carousel-reducer" element={<CarouselUsingReducer />} />
       <Route
         path="login-using-context"
         element={
