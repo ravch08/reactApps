@@ -20,6 +20,7 @@ import {
   Layout,
   LazyLoading,
   LoadMoreData,
+  LoginUsingContext,
   NavTabs,
   Page404,
   Pagination,
@@ -39,6 +40,7 @@ import {
   TodoList,
   Wordweb,
 } from "./components/utils/helper";
+import { AuthProvider } from "./context/AuthContext";
 import "./styles/App.css";
 
 const router = createBrowserRouter(
@@ -74,6 +76,14 @@ const router = createBrowserRouter(
       <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="sticky-notes" element={<StickyNotes />} />
       <Route path="lazy-loading" element={<LazyLoading />} />
+      <Route
+        path="login-using-context"
+        element={
+          <AuthProvider>
+            <LoginUsingContext />
+          </AuthProvider>
+        }
+      />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

@@ -8,6 +8,9 @@ const Home = () => {
           React Apps
         </h1>
         <div className="flex flex-wrap items-center justify-between gap-6">
+          <Link to="login-using-context" className="btn-link">
+            Login with Context
+          </Link>
           <Link to="carousel" className="btn-link">
             Carousel
           </Link>
