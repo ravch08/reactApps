@@ -22,6 +22,7 @@ import {
   LazyLoading,
   LoadMoreData,
   LoginUsingContext,
+  MemoryGame,
   NavTabs,
   Page404,
   Pagination,
@@ -74,6 +75,7 @@ const router = createBrowserRouter(
       <Route path="recursive-menu" element={<RecursiveMenu />} />
       <Route path="create-circles" element={<CreateCircles />} />
       <Route path="expanse" element={<Expanse />} />
+      <Route path="memory-game" element={<MemoryGame />} />
       <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="sticky-notes" element={<StickyNotes />} />
       <Route path="lazy-loading" element={<LazyLoading />} />

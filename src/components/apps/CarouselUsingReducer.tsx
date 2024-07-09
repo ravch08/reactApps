@@ -48,8 +48,6 @@ function imageReducer(state: InitailStateProps, action: ActionProps) {
 const CarouselUsingReducer = () => {
   const [state, dispatch] = useReducer(imageReducer, initialGalleryState);
 
-  console.log(state);
-
   return (
     <>
       <BackToHome />
