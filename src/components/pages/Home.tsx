@@ -35,8 +35,14 @@ const Home = () => {
           <Link to="count-reducer" className="btn-link">
             Counter Reducer
           </Link>
+          <Link to="country-capital" className="btn-link">
+            Country Capital Game
+          </Link>
           <Link to="country" className="btn-link">
             Country Dropdown
+          </Link>
+          <Link to="interactive-grid" className="btn-link">
+            Intractive Grid
           </Link>
           <Link to="radio" className="btn-link">
             Radio

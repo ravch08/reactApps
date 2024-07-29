@@ -15,9 +15,11 @@ export { default as CreateCircles } from "../apps/CirclesIntersecting/CirclesInt
 export { default as Counter } from "../apps/Counter.tsx";
 export { default as CountReducer } from "../apps/countReducer/CountReducer.tsx";
 export { default as Country } from "../apps/Country.tsx";
+export { default as CountryCapitalGame } from "../apps/CountryCapitalGame.tsx";
 export { default as Debouncing } from "../apps/Debouncing.tsx";
 export { default as Expanse } from "../apps/Expanse.tsx";
 export { default as HexGenerator } from "../apps/HexGenerator.tsx";
+export { default as InteractiveGrid } from "../apps/InteractiveGrid/InteractiveGrid.tsx";
 export { default as LazyImage } from "../apps/LazyLoadingImages/LazyImage.tsx";
 export { default as LazyLoading } from "../apps/LazyLoadingImages/LazyLoading.tsx";
 export { default as LoadMoreData } from "../apps/LoadMoreData.tsx";

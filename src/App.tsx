@@ -13,11 +13,13 @@ import {
   CountReducer,
   Counter,
   Country,
+  CountryCapitalGame,
   CreateCircles,
   Debouncing,
   Expanse,
   HexGenerator,
   Home,
+  InteractiveGrid,
   Layout,
   LazyLoading,
   LoadMoreData,
@@ -63,9 +65,11 @@ const router = createBrowserRouter(
       <Route path="scroll-indicator" element={<ScrollIndicator />} />
       <Route path="qr-code" element={<QRCodeGenerator />} />
       <Route path="todolist" element={<TodoList />} />
+      <Route path="interactive-grid" element={<InteractiveGrid />} />
       <Route path="checked-todolist" element={<CheckedTodoList />} />
       <Route path="rating" element={<StarRating stars={5} />} />
       <Route path="smiley" element={<SmileyTap />} />
+      <Route path="country-capital" element={<CountryCapitalGame />} />
       <Route path="search-autocomplete" element={<SearchAutocomplete />} />
       <Route path="load-more" element={<LoadMoreData />} />
       <Route path="timer" element={<Timer />} />
