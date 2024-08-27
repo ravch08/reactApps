@@ -23,6 +23,9 @@ const Home = () => {
           <Link to="navtabs" className="btn-link">
             NavTabs
           </Link>
+          <Link to="quiz" className="btn-link">
+            Quiz
+          </Link>
           <Link to="counter" className="btn-link">
             Counter
           </Link>

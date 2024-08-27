@@ -30,6 +30,7 @@ import {
   Pagination,
   Password,
   QRCodeGenerator,
+  Quiz,
   Radio,
   RecursiveMenu,
   ScrollIndicator,
@@ -60,6 +61,7 @@ const router = createBrowserRouter(
       <Route path="count-reducer" element={<CountReducer />} />
       <Route path="step-counter" element={<StepCounter />} />
       <Route path="country" element={<Country />} />
+      <Route path="quiz" element={<Quiz />} />
       <Route path="radio" element={<Radio />} />
       <Route path="pagination" element={<Pagination />} />
       <Route path="scroll-indicator" element={<ScrollIndicator />} />
