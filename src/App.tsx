@@ -5,6 +5,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 
+import MultiSelectDropdown from "./components/apps/multiselectStateDropdown/MultiSelectDropdown";
 import {
   Accordion,
   Carousel,
@@ -57,6 +58,7 @@ const router = createBrowserRouter(
       <Route path="hex-generator" element={<HexGenerator />} />
       <Route path="debouncing" element={<Debouncing />} />
       <Route path="navtabs" element={<NavTabs />} />
+      <Route path="multiselect-dropdown" element={<MultiSelectDropdown />} />
       <Route path="counter" element={<Counter />} />
       <Route path="count-reducer" element={<CountReducer />} />
       <Route path="step-counter" element={<StepCounter />} />

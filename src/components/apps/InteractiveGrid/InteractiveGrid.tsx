@@ -54,8 +54,6 @@ const InteractiveGrid = () => {
     return () => clearInterval(interval);
   }, [shouldRemove]);
 
-  console.log(gridIdArr);
-
   return (
     <>
       <BackToHome />

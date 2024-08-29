@@ -32,6 +32,9 @@ const Home = () => {
           <Link to="step-counter" className="btn-link">
             Step Counter
           </Link>
+          <Link to="multiselect-dropdown" className="btn-link">
+            Multiselect Dropdown
+          </Link>
           <Link to="memory-game" className="btn-link">
             Memory Game
           </Link>
