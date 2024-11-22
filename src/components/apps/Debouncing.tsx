@@ -26,7 +26,6 @@ const Debouncing = () => {
       item?.username.toLowerCase().includes(debouncedTerm),
     );
 
-    console.log(1);
     debouncedTerm ? setUsers(filteredUsers) : setUsers([]);
   }, [data, debouncedTerm]);
 

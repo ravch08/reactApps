@@ -29,6 +29,7 @@ import {
   NavTabs,
   Page404,
   Pagination,
+  PaginationWithLimit,
   Password,
   QRCodeGenerator,
   Quiz,
@@ -40,7 +41,6 @@ import {
   SmileyTap,
   StarRating,
   StepCounter,
-  StickyNotes,
   TicTacToe,
   Timer,
   TodoList,
@@ -66,6 +66,7 @@ const router = createBrowserRouter(
       <Route path="quiz" element={<Quiz />} />
       <Route path="radio" element={<Radio />} />
       <Route path="pagination" element={<Pagination />} />
+      <Route path="pagination-limit" element={<PaginationWithLimit />} />
       <Route path="scroll-indicator" element={<ScrollIndicator />} />
       <Route path="qr-code" element={<QRCodeGenerator />} />
       <Route path="todolist" element={<TodoList />} />
@@ -85,7 +86,6 @@ const router = createBrowserRouter(
       <Route path="expanse" element={<Expanse />} />
       <Route path="memory-game" element={<MemoryGame />} />
       <Route path="tic-tac-toe" element={<TicTacToe />} />
-      <Route path="sticky-notes" element={<StickyNotes />} />
       <Route path="lazy-loading" element={<LazyLoading />} />
       <Route path="carousel-reducer" element={<CarouselUsingReducer />} />
       <Route

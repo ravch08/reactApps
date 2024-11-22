@@ -1,26 +1,7 @@
 import { useState } from "react";
-import BackToHome from "../features/BackToHome";
 
-const countries = [
-  {
-    id: "c1",
-    code: "IN",
-    name: "India",
-    cities: ["Delhi", "Mumbai", "Bangalore"],
-  },
-  {
-    id: "c2",
-    code: "PAK",
-    name: "Pakistan",
-    cities: ["Lahore", "Karachi", "Rawalpindi"],
-  },
-  {
-    id: "c3",
-    code: "CH",
-    name: "China",
-    cities: ["Hongkong", "Shanghai", "Yunnan"],
-  },
-];
+import BackToHome from "../features/BackToHome";
+import { countries } from "../utils/data";
 
 const Country = () => {
   const [code, setCode] = useState("IN");

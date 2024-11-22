@@ -322,3 +322,24 @@ export const questions = [
     points: 20,
   },
 ];
+
+export const countries = [
+  {
+    id: "c1",
+    code: "IN",
+    name: "India",
+    cities: ["Delhi", "Mumbai", "Bangalore"],
+  },
+  {
+    id: "c2",
+    code: "PAK",
+    name: "Pakistan",
+    cities: ["Lahore", "Karachi", "Rawalpindi"],
+  },
+  {
+    id: "c3",
+    code: "CH",
+    name: "China",
+    cities: ["Hongkong", "Shanghai", "Yunnan"],
+  },
+];

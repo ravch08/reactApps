@@ -56,8 +56,8 @@ const MemoryGame = () => {
 
   const handleRestart = () => {
     setStatus("");
-    setRevealedGrid(initialRevealedGrid);
     setPreviousClick(undefined);
+    setRevealedGrid(initialRevealedGrid);
   };
 
   return (
@@ -83,6 +83,7 @@ const MemoryGame = () => {
                 </div>
               ))}
             </div>
+
             {status ? (
               <h3 className="mb-12 text-2xl font-medium">{status}</h3>
             ) : null}

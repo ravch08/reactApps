@@ -18,7 +18,7 @@ const LazyLoading = () => {
         <div className="container">
           <h2 className="main-heading pb-12">Lazy Loading Images</h2>
           {imageArr?.map((img, idx) => (
-            <div className="mb-20 flex items-start gap-8">
+            <div key={idx} className="mb-20 flex items-start gap-8">
               <LazyImage key={idx} imgSrc={img} />
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus

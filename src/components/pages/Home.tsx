@@ -7,7 +7,7 @@ const Home = () => {
         <h1 className="mb-16 text-center text-5xl font-bold uppercase">
           React Apps
         </h1>
-        <div className="flex flex-wrap items-center justify-between gap-6">
+        <div className="grid grid-cols-1 gap-6 px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <Link to="login-using-context" className="btn-link">
             Login with Context
           </Link>
@@ -62,6 +62,9 @@ const Home = () => {
           <Link to="pagination" className="btn-link">
             Pagination
           </Link>
+          <Link to="pagination-limit" className="btn-link">
+            Pagination with Limit
+          </Link>
           <Link to="todolist" className="btn-link">
             TODO List
           </Link>
@@ -109,9 +112,6 @@ const Home = () => {
           </Link>
           <Link to="tic-tac-toe" className="btn-link">
             Tic Tac Toe
-          </Link>
-          <Link to="sticky-notes" className="btn-link">
-            Sticky Notes
           </Link>
           <Link to="lazy-loading" className="btn-link">
             Lazy Loading

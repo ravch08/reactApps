@@ -15,7 +15,7 @@ section {
 }
 
 .btn-link {
-  @apply rounded-md bg-slate-700 px-12 py-2 text-white transition-colors duration-500 ease-in-out hover:bg-slate-900;
+  @apply rounded-md bg-slate-700 px-4 py-3 text-center text-white transition-colors duration-500 ease-in-out hover:bg-slate-900;
 }
 .btn-option {
   @apply w-full cursor-pointer rounded-md bg-slate-700 px-12 py-2 text-white transition-colors duration-500 ease-in-out hover:bg-slate-900;
