@@ -34,7 +34,7 @@ const CheckedTodolist = () => {
 
   return (
     <section className="section">
-      <div className="container mx-auto h-[80vh]">
+      <div className="container mx-auto mx-auto h-[80vh]">
         <BackButton />
         <div className="mx-auto flex w-1/2 flex-col items-center justify-center">
           <h2 className="mb-12 text-2xl font-semibold">TO-DO LIST</h2>
@@ -63,7 +63,7 @@ const CheckedTodolist = () => {
           </form>
 
           <div className="flex w-full flex-col items-center gap-4">
-            {itemsList.length !== 0 ? (
+            {itemsList && itemsList?.length > 0 ? (
               itemsList?.map((item, idx) => (
                 <div
                   key={uuid()}

@@ -27,13 +27,13 @@ const Accordion = () => {
   return (
     <>
       <BackToHome />
-      <section>
+      <section aria-labelledby="Accordion with Multiselect">
         <div className="container mx-auto flex flex-col items-center justify-center">
           <h1 className="main-heading">Accordion</h1>
 
           <label
             htmlFor="multiselect"
-            className="mb-12 flex items-center gap-2 text-sm"
+            className="mb-8 flex items-center gap-2 text-sm"
           >
             <input
               type="checkbox"
@@ -42,17 +42,17 @@ const Accordion = () => {
               className="h-4 w-4"
               onChange={() => setChecked((prev) => !prev)}
             />
-            <span>MultiSelect</span>
+            <span>Enable MultiSelect</span>
           </label>
 
           <div className="flex w-[1000px] flex-col items-start gap-6 px-8">
             {accordionData?.map((item) => (
               <div className="flex w-full flex-col" key={item.id}>
-                <div className="flex items-center justify-between gap-4 rounded-t-md bg-slate-600 p-2 text-white">
+                <div className="flex items-center justify-between gap-4 rounded-t-md bg-blue-600 p-2 text-white">
                   <h2>{item.title}</h2>
                   <button
                     onClick={() => handleClick(item.id)}
-                    className="flex h-6 w-6 items-center justify-center bg-slate-800"
+                    className="flex h-6 w-6 items-center justify-center bg-blue-800"
                   >
                     <svg
                       fill="white"

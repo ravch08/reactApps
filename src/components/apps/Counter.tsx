@@ -11,7 +11,7 @@ const Counter = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Counter">
-        <div className="container flex items-center justify-center ">
+        <div className="container mx-auto flex items-center justify-center ">
           <div className="flex items-center gap-4">
             <button className="btn-link" onClick={handleDecrement}>
               Decrease

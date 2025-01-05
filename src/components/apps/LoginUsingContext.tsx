@@ -31,7 +31,7 @@ const LoginUsingContext = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Radio Selection">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex flex-col items-center gap-4">
             <h2 className="mb-12 text-4xl font-semibold">
               Login using context

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import BackToHome from "../../features/BackToHome";
+
 import { states } from "../../utils/data";
 
 const MultiSelectDropdown = () => {
@@ -10,30 +11,29 @@ const MultiSelectDropdown = () => {
 
   const handleAddState = (state: string) => {
     const selectedStatesCopy = [...selectedStates];
+
     selectedStatesCopy.push(state);
     setSelectedStates(selectedStatesCopy);
   };
-
-  console.log(selectedStates);
 
   return (
     <>
       <BackToHome />
       <section aria-labelledby="Multiselect State Dropdown">
-        <div className="container">
-          <div className="mt-20 flex flex-col items-center gap-2">
-            <h2 className="mb-16 text-2xl font-semibold">
+        <div className="container mx-auto">
+          <div className=" flex flex-col items-center gap-2">
+            <h2 className="mb-8 text-2xl font-semibold">
               Multiselect State Dropdown
             </h2>
 
-            <div className="relative mx-auto flex h-12 w-1/2 items-center bg-white pl-4">
+            <div className="relative mx-auto flex h-12 w-2/3 items-center rounded-sm bg-white pl-4">
               <span className="font-bold">
                 {selectedStates.length > 0
                   ? `${selectedStates.length} states selected`
                   : `--- select your states ---`}
               </span>
               <button
-                className="absolute right-0 top-0 cursor-pointer bg-slate-300 p-4 transition-colors duration-500 hover:bg-slate-500"
+                className="absolute right-0 top-0 cursor-pointer bg-blue-300 p-4 transition-colors duration-500 hover:bg-blue-500"
                 onClick={handleShowDropdown}
               >
                 <svg
@@ -52,7 +52,7 @@ const MultiSelectDropdown = () => {
             </div>
 
             <div
-              className={`${showDropdown ? "grid" : "hidden"}  grid-cols-3 gap-4 rounded-md bg-slate-100 p-6 shadow-lg`}
+              className={`${showDropdown ? "grid" : "hidden"} w-3/4 grid-cols-4 gap-4 rounded-md bg-blue-100 p-6 shadow-lg`}
             >
               {states?.map((state) => (
                 <div className="flex items-center gap-2" key={state}>

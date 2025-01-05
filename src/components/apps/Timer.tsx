@@ -57,7 +57,7 @@ const Timer = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Timer">
-        <div className="container mx-auto flex flex-col items-center justify-center">
+        <div className="container mx-auto mx-auto flex flex-col items-center justify-center">
           <div className="flex items-center gap-2">
             <span className="text-3xl">{hours < 10 ? `0${hours}` : hours}</span>
             <span className="text-3xl">:</span>

@@ -15,7 +15,7 @@ const LazyLoading = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Lazy Loading Images">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="main-heading pb-12">Lazy Loading Images</h2>
           {imageArr?.map((img, idx) => (
             <div key={idx} className="mb-20 flex items-start gap-8">

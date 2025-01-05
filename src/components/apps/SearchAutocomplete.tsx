@@ -43,7 +43,7 @@ const SearchAutocomplete = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Search Autocomplete">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="main-heading">Search AutoComplete</h2>
           {selectedItem ? (
             <p>

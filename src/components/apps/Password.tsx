@@ -26,7 +26,7 @@ const Password = () => {
 
   return (
     <section className="section">
-      <div className="container mx-auto">
+      <div className="container mx-auto mx-auto">
         <BackButton />
         <div className="flex flex-col ">
           <h2 className="mb-12 text-center font-serif text-5xl">

@@ -33,20 +33,18 @@ const Debouncing = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
+        <div className="container mx-auto">
           <div className="mb-12 flex flex-col items-center justify-center">
-            <h2 className="mb-8 text-2xl font-bold">Debouncing</h2>
+            <h1 className="main-heading">Debouncing</h1>
 
-            <form>
-              <input
-                type="text"
-                id="search-field"
-                value={searchTerm}
-                placeholder="Enter Search term..."
-                className="bg-slate-200 px-3 py-2 text-sm"
-                onChange={(e) => setSearchterm(e.target.value)}
-              />
-            </form>
+            <input
+              type="text"
+              id="search-field"
+              value={searchTerm}
+              placeholder="Enter Search term..."
+              onChange={(e) => setSearchterm(e.target.value)}
+              className="w-72 rounded-md bg-slate-200 px-3 py-2 text-sm"
+            />
 
             <div className="mt-12 flex items-center gap-4">
               <p className="w-60">
@@ -58,7 +56,7 @@ const Debouncing = () => {
               </p>
             </div>
 
-            <div className="mt-16 flex h-60 w-full flex-col gap-2 bg-slate-200 p-12">
+            <div className="mt-16 flex h-60 w-2/3 flex-col gap-2 rounded-md bg-blue-200 p-12">
               {isLoading ? <p>Loading...</p> : null}
               {error ? <p>{error}</p> : null}
 

@@ -26,8 +26,7 @@ const ScrollIndicator = () => {
   }
 
   const showScrollBar = () => {
-    const scrolledHeight =
-      document.body.scrollTop || document.documentElement.scrollTop;
+    const scrolledHeight = document.documentElement.scrollTop;
 
     const height =
       document.documentElement.scrollHeight -
@@ -58,7 +57,7 @@ const ScrollIndicator = () => {
         className={`fixed left-0 top-0 z-0 h-[10px] w-full bg-gray-500`}
       ></div>
       <section aria-labelledby="Scroll Indicator" className="mt-24">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex flex-wrap items-center justify-center gap-6">
             {isLoading ? <h2>Loading...</h2> : null}
             {posts?.map((post: PostProps) => (

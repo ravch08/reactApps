@@ -14,7 +14,7 @@ const StarRating = ({ stars }: { stars: number }) => {
     <>
       <BackToHome />
       <section aria-labelledby="Star Rating">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="mt-20 flex items-center gap-2">
             <h2 className="mr-12 text-2xl font-semibold">Rating:</h2>
             {[...Array(stars)].map((_, idx) => {

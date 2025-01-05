@@ -1,5 +1,5 @@
-import { MenuListProps } from "../../../types/types";
 import MenuItem from "./MenuItem";
+import { MenuListProps } from "./RecursiveMenu";
 
 const MenuList = ({ list }: MenuListProps) => {
   return (

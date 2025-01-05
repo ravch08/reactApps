@@ -14,7 +14,7 @@ const ShowModal = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Modal">
-        <div className="container flex items-center justify-center">
+        <div className="container mx-auto flex items-center justify-center">
           <button className="btn-link" onClick={handleDisplayModal}>
             Open Modal
           </button>

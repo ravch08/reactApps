@@ -50,7 +50,7 @@ const LoadMoreData = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Products Load More">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="mb-12 flex flex-col items-center justify-center gap-8 text-center">
             <h2 className="text-4xl font-semibold">Load More Data</h2>
           </div>

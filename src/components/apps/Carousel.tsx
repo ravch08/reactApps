@@ -12,6 +12,7 @@ const Carousel = () => {
       setIndex((prevIdx: number) => prevIdx - 1);
     }
   };
+
   const handleNextImage = () => {
     if (index >= carouselData.length - 1) {
       setIndex(0);
@@ -24,24 +25,26 @@ const Carousel = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Carousel">
-        <div className="container">
+        <div className="container mx-auto">
           <h1 className="main-heading">Image Carousel</h1>
           {carouselData.length ? (
             <div
-              className="flex flex-col items-center justify-center"
+              className="mb-10 flex flex-col items-center justify-center"
               key={carouselData[index].id}
             >
-              <figure className="h-[400px] w-[50%] overflow-hidden ">
+              <figure className="h-[400px] w-[50%] overflow-hidden rounded-t-md">
                 <img
                   src={carouselData[index].imgUrl}
                   alt={carouselData[index].title}
                 />
               </figure>
-              <h2 className="mb-6 py-4">{carouselData[index].title}</h2>
+              <h2 className="w-[50%] bg-blue-600 py-2 text-center text-sm text-white">
+                {carouselData[index].title}
+              </h2>
             </div>
           ) : null}
 
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-4">
             <button onClick={handlePrevImage} className="btn-primary">
               Prev
             </button>

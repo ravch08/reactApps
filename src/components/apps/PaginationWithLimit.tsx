@@ -67,12 +67,10 @@ const PaginationWithLimit = () => {
   return (
     <>
       <BackToHome />
-      <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
+      <section aria-labelledby="Pagination with Limit">
+        <div className="container mx-auto flex flex-col items-center">
           <div className="mb-12 flex flex-col items-center justify-center">
-            <h2 className="mb-12 text-4xl font-bold">
-              All Products Pagination!
-            </h2>
+            <h1 className="main-heading">All Products</h1>
 
             {error ? <h2>{error}</h2> : null}
             {isLoading ? (
@@ -97,27 +95,19 @@ const PaginationWithLimit = () => {
             </div>
 
             <div className="mt-12 flex w-full items-center justify-center gap-2 text-center">
-              <button
-                onClick={handlePrev}
-                className="bg-slate-800 px-4 py-1 text-sm text-white"
-              >
+              <button onClick={handlePrev} className="btn-nav">
                 Prev
               </button>
               {pageArr?.map((item) => (
                 <button
                   key={item}
                   onClick={() => setPage(item)}
-                  className={`text-sm ${
-                    page === item ? "bg-slate-800" : "bg-slate-600"
-                  } px-4 py-1 text-white`}
+                  className={`btn-page ${page === item ? "active" : ""}`}
                 >
                   {item + 1}
                 </button>
               ))}
-              <button
-                onClick={handleNext}
-                className="bg-slate-800 px-4 py-1 text-sm text-white"
-              >
+              <button onClick={handleNext} className="btn-nav">
                 Next
               </button>
             </div>

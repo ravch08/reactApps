@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import BackToHome from "../../features/BackToHome";
+import BackToHome from "../features/BackToHome.tsx";
 
 const shapeOfBox = [
   [1, 1, 1],
@@ -57,10 +57,10 @@ const InteractiveGrid = () => {
   return (
     <>
       <BackToHome />
-      <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
+      <section aria-labelledby="Interactive Grid">
+        <div className="container mx-auto flex flex-col items-center">
           <div className="mb-12 flex flex-col items-center justify-center">
-            <h2 className="mb-12 text-4xl font-bold ">Interactive Grid</h2>
+            <h2 className="main-heading">Interactive Grid</h2>
 
             <div className="grid grid-cols-3 gap-2">
               {shapeOfBox?.map((col, colId) =>
@@ -68,7 +68,7 @@ const InteractiveGrid = () => {
                   <div
                     key={`${colId}${itemId}`}
                     onClick={() => handleClick(colId, itemId)}
-                    className={`h-16 w-16 border border-black transition-colors duration-300 ease-in-out ${gridIdArr.includes(`${colId}${itemId}`) ? "bg-green-600" : "bg-none"}`}
+                    className={`h-16 w-16 rounded-sm border border-blue-600 transition-colors duration-300 ease-in-out ${gridIdArr.includes(`${colId}${itemId}`) ? "bg-blue-500" : "bg-none"}`}
                     style={{
                       opacity: val ? 1 : 0,
                       cursor: val ? "pointer" : "initial",

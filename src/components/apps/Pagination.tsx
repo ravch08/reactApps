@@ -67,58 +67,62 @@ const Pagination = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
-          <div className="mb-12 flex items-center justify-center">
-            <h2 className="mr-8 text-2xl font-bold">All Posts</h2>
+        <div className="container mx-auto flex flex-col items-center">
+          <div className="mb-12 flex w-full items-center justify-between px-6">
+            <h1 className="main-heading">All Posts</h1>
 
-            <span>Posts per Page: </span>
-            <select
-              id="postsPerPage"
-              className="ml-2 border border-slate-300 p-1"
-              onChange={(e) => setPostsPerPage(parseInt(e.target.value))}
-            >
-              <option value={10}>10</option>
-              <option value={15}>15</option>
-              <option value={20}>20</option>
-              <option value={25}>25</option>
-            </select>
-          </div>
-          {isLoading ? (
-            <h2 className="py-6 text-center text-xl">Loading...</h2>
-          ) : null}
-          <div className="flex flex-wrap items-center justify-between gap-6">
-            {requiredPosts.length
-              ? requiredPosts.map((post: UserProps) => (
-                  <div
-                    key={post.id}
-                    className="h-60 w-[18%] border border-slate-400 p-4 text-center"
-                  >
-                    <span>{post.id}</span>
-                    <h2 className="my-3 line-clamp-1 text-xl font-semibold">
-                      {post.title}
-                    </h2>
-                    <p className="line-clamp-5">{post.body}</p>
-                  </div>
-                ))
-              : null}
+            <div className="flex items-center gap-2 rounded-md bg-blue-800 p-2 text-sm">
+              <span className=" text-white">Posts per Page: </span>
+              <select
+                id="postsPerPage"
+                className="ml-2 rounded-sm border border-slate-300 p-1"
+                onChange={(e) => setPostsPerPage(parseInt(e.target.value))}
+              >
+                <option value={10}>10</option>
+                <option value={15}>15</option>
+                <option value={20}>20</option>
+                <option value={25}>25</option>
+              </select>
+            </div>
           </div>
 
-          <div className="mt-12 flex items-center gap-4">
-            <button className="btn-page" onClick={handlePrevButton}>
+          <div className="w-full rounded-md bg-transparent">
+            {isLoading ? (
+              <h2 className="py-6 text-center text-xl">Loading...</h2>
+            ) : null}
+
+            <div className="flex flex-wrap items-center justify-between gap-6">
+              {requiredPosts.length
+                ? requiredPosts.map((post: UserProps) => (
+                    <div
+                      key={post.id}
+                      className="w-[18%] rounded-md bg-blue-500 px-4 py-6 text-center text-white"
+                    >
+                      <span>{post.id}</span>
+                      <h2 className="my-3 line-clamp-1 text-xl font-semibold text-black">
+                        {post.title}
+                      </h2>
+                      <p className="line-clamp-3">{post.body}</p>
+                    </div>
+                  ))
+                : null}
+            </div>
+          </div>
+
+          <div className="mt-16 flex items-center gap-4">
+            <button className="btn-nav" onClick={handlePrevButton}>
               Prev
             </button>
             {pagesArr?.map((page) => (
               <button
                 key={page}
-                className={
-                  page === currentPage ? "btn-page active" : "btn-page"
-                }
+                className={`btn-page ${page === currentPage ? "active" : ""}`}
                 onClick={() => setCurrentPage(page)}
               >
                 {page}
               </button>
             ))}
-            <button className="btn-page" onClick={handleNextButton}>
+            <button className="btn-nav" onClick={handleNextButton}>
               Next
             </button>
           </div>

@@ -2,11 +2,8 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="h-screen py-56">
+    <main className="h-screen py-40">
       <div className="container mx-auto">
-        <h1 className="mb-16 text-center text-5xl font-bold uppercase">
-          React Apps
-        </h1>
         <div className="grid grid-cols-1 gap-6 px-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
           <Link to="login-using-context" className="btn-link">
             Login with Context
@@ -29,9 +26,6 @@ const Home = () => {
           <Link to="counter" className="btn-link">
             Counter
           </Link>
-          <Link to="step-counter" className="btn-link">
-            Step Counter
-          </Link>
           <Link to="multiselect-dropdown" className="btn-link">
             Multiselect Dropdown
           </Link>
@@ -48,7 +42,7 @@ const Home = () => {
             Country Dropdown
           </Link>
           <Link to="interactive-grid" className="btn-link">
-            Intractive Grid
+            Interactive Grid
           </Link>
           <Link to="radio" className="btn-link">
             Radio

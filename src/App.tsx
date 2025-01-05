@@ -40,14 +40,12 @@ import {
   ShowModal,
   SmileyTap,
   StarRating,
-  StepCounter,
   TicTacToe,
   Timer,
   TodoList,
   Wordweb,
 } from "./components/utils/helper";
 import { AuthProvider } from "./context/AuthContext";
-import "./styles/App.css";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -61,7 +59,6 @@ const router = createBrowserRouter(
       <Route path="multiselect-dropdown" element={<MultiSelectDropdown />} />
       <Route path="counter" element={<Counter />} />
       <Route path="count-reducer" element={<CountReducer />} />
-      <Route path="step-counter" element={<StepCounter />} />
       <Route path="country" element={<Country />} />
       <Route path="quiz" element={<Quiz />} />
       <Route path="radio" element={<Radio />} />

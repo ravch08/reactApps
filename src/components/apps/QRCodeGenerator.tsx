@@ -9,6 +9,7 @@ const QRCodeGenerator = () => {
 
   function generateQRCode(e: React.FormEvent<HTMLButtonElement>) {
     e.preventDefault();
+
     setQRCode(inputVal);
     setInputVal("");
   }
@@ -17,7 +18,7 @@ const QRCodeGenerator = () => {
     <>
       <BackHome />
       <section aria-labelledby="QR Code Generator" className="mt-24">
-        <div className="container flex flex-col items-center">
+        <div className="container mx-auto flex flex-col items-center">
           <form className="mb-24 flex items-center gap-4">
             <input
               autoFocus

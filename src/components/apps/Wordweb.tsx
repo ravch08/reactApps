@@ -43,7 +43,7 @@ const Wordweb = () => {
 
   return (
     <section className="section">
-      <div className="container mx-auto h-[60vh]">
+      <div className="container mx-auto mx-auto h-[60vh]">
         <BackButton />
         <div className="flex flex-col items-center">
           <h2 className="mb-12 text-center font-serif text-5xl">WORDWEB</h2>

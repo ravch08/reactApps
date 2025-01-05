@@ -38,7 +38,7 @@ const TodoList = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Todo List">
-        <div className="container">
+        <div className="container mx-auto">
           <label htmlFor="todoItem">Enter TodoItem:</label>
           <input
             autoFocus

@@ -28,7 +28,7 @@ const Quiz = () => {
     <>
       <BackToHome />
       <section aria-labelledby="GOT Quiz">
-        <div className="container flex w-full flex-col items-center">
+        <div className="container mx-auto flex w-full flex-col items-center">
           <div className="mb-12 flex w-full flex-col items-center justify-center">
             {status === "loading" ? <LoadingMessage /> : null}
             {status === "error" ? <ErrorMessage /> : null}

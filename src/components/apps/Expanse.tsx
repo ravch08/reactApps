@@ -30,7 +30,7 @@ const Expanse = () => {
       <BackToHome />
 
       <section aria-labelledby="Expanse Tracker">
-        <div className="container">
+        <div className="container mx-auto">
           <h2 className="main-heading">Expanse Tracker</h2>
           <form
             onSubmit={handleSubmit}

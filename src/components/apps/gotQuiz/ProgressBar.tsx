@@ -26,10 +26,11 @@ const ProgressBar = ({
         <progress
           value={index + 1}
           max={numOfQuestions}
-          className="w-full bg-slate-100"
+          className="w-full appearance-none bg-white"
         >
           {index + 1}
         </progress>
+
         <span className="text-lg font-bold">{index + 1}</span>
       </div>
     </article>

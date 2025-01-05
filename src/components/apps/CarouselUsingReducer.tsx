@@ -1,13 +1,7 @@
 import { useReducer } from "react";
 
 import BackToHome from "../features/BackToHome";
-
-const galleryImages = [
-  "https://images.pexels.com/photos/618079/pexels-photo-618079.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/417273/pexels-photo-417273.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-  "https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-];
+import { galleryImages } from "../utils/data";
 
 type InitailStateProps = {
   curImageIdx: number;
@@ -51,24 +45,28 @@ const CarouselUsingReducer = () => {
   return (
     <>
       <BackToHome />
-      <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
+      <section aria-labelledby="Carousel using Reducer">
+        <div className="container mx-auto flex flex-col items-center">
           <div className="mb-12 flex flex-col items-center justify-center">
-            <h2 className="mb-8 text-2xl font-bold">Image Gallery</h2>
+            <h1 className="main-heading">Carousel using Reducer</h1>
 
-            <figure className="h-80 w-1/2 overflow-hidden">
-              <img src={galleryImages[state.curImageIdx]} alt="Image" />
+            <figure className="h-[300px] max-w-[50%] overflow-hidden rounded-md">
+              <img
+                alt="Image"
+                className="w-full"
+                src={galleryImages[state.curImageIdx]}
+              />
             </figure>
 
             <div className="mt-12 flex items-center gap-3">
               <button
-                className="btn-link"
+                className="btn-primary"
                 onClick={() => dispatch({ type: "PREV_IMAGE" })}
               >
                 Prev
               </button>
               <button
-                className="btn-link"
+                className="btn-primary"
                 onClick={() => dispatch({ type: "NEXT_IMAGE" })}
               >
                 Next

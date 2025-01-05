@@ -66,7 +66,7 @@ const TicTacToe = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Tic Tac Toe">
-        <div className="container flex items-center justify-center">
+        <div className="container mx-auto flex items-center justify-center">
           <div className="grid h-60 w-60 grid-cols-3 grid-rows-3 bg-amber-200">
             <SingleSquare
               id={0}

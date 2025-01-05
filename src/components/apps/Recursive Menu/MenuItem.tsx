@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { MenuItemProps } from "../../../types/types";
 import MenuList from "./MenuList";
+import { MenuItemProps } from "./RecursiveMenu";
 
 const MenuItem = ({ menuItem }: MenuItemProps) => {
   const [showChildren, setShowChildren] = useState<{ [key: string]: boolean }>(

@@ -28,8 +28,8 @@ const newData: string[] = shuffleArray(Object.entries(countryData).flat());
 
 const CountryCapitalGame = () => {
   const [options, setOptions] = useState(newData);
-  const [optionsExist, setOptionsExist] = useState<boolean | null>(null);
   const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [optionsExist, setOptionsExist] = useState<boolean | null>(null);
 
   const handleClick = (value: string) => {
     const selectedOptionsCopy = [...selectedOptions];
@@ -80,8 +80,8 @@ const CountryCapitalGame = () => {
   return (
     <>
       <BackToHome />
-      <section aria-labelledby="Pagination">
-        <div className="container flex flex-col items-center">
+      <section aria-labelledby="Country-Capital Game">
+        <div className="container mx-auto flex flex-col items-center">
           <div className="mb-12 flex flex-col items-center justify-center">
             <h2 className="mb-12 text-4xl font-bold">Country Capital Game</h2>
 
@@ -90,7 +90,7 @@ const CountryCapitalGame = () => {
                 <Fragment key={item}>
                   <button
                     onClick={() => handleClick(item)}
-                    className={`rounded-md  px-4 py-2 text-sm text-white ${selectedOptions.includes(item) && optionsExist ? "bg-green-600" : selectedOptions.includes(item) && optionsExist === false ? "bg-red-600" : selectedOptions.includes(item) ? "bg-blue-500" : "bg-slate-600"}`}
+                    className={`rounded-md  px-4 py-2 text-sm text-white ${selectedOptions.includes(item) && optionsExist ? "bg-green-600" : selectedOptions.includes(item) && optionsExist === false ? "bg-red-600" : selectedOptions.includes(item) ? "bg-blue-700" : "bg-blue-500"}`}
                   >
                     {item}
                   </button>
@@ -98,8 +98,8 @@ const CountryCapitalGame = () => {
               ))}
 
               {options.length === 0 ? (
-                <p className="text-xl">
-                  Congratulations!! You Won, Wanna try Again?
+                <p className="text-xl ">
+                  Congratulations!! You Won!! Wanna try Again?
                 </p>
               ) : null}
             </div>

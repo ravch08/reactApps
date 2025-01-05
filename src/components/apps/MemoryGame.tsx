@@ -1,6 +1,11 @@
 import { useState } from "react";
 import BackToHome from "../features/BackToHome";
 
+type TPrevClick = {
+  row: number;
+  col: number;
+};
+
 const initialGrid = [
   [1, 6, 5, 2],
   [2, 3, 1, 4],
@@ -11,14 +16,10 @@ const initialRevealedGrid = new Array(initialGrid.length)
   .fill("")
   .map(() => new Array(initialGrid[0].length).fill(false));
 
-type TPrevClick = {
-  row: number;
-  col: number;
-};
-
 const MemoryGame = () => {
   const [grid] = useState(initialGrid);
   const [status, setStatus] = useState("");
+
   const [revealedGrid, setRevealedGrid] = useState(initialRevealedGrid);
   const [previousClick, setPreviousClick] = useState<TPrevClick | undefined>();
 
@@ -64,7 +65,7 @@ const MemoryGame = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Memory Game">
-        <div className="container flex flex-col items-center">
+        <div className="container mx-auto flex flex-col items-center">
           <div className="flex flex-col items-center justify-center">
             <h2 className="mb-12 text-4xl font-bold">Memory Game</h2>
 
@@ -75,7 +76,7 @@ const MemoryGame = () => {
                     <div
                       key={colIndex}
                       onClick={() => handleClick(rowIndex, colIndex)}
-                      className="mb-2 flex h-16 w-20 items-center justify-center gap-2 border border-slate-800 bg-neutral-800 text-white"
+                      className={`mb-2 flex h-20 w-20 items-center justify-center gap-2 rounded-md border text-xl text-white ${revealedGrid[rowIndex][colIndex] ? "border-blue-700 bg-blue-700" : "border-blue-500 bg-blue-500"}`}
                     >
                       {revealedGrid[rowIndex][colIndex] ? rowItem : ""}
                     </div>

@@ -43,12 +43,12 @@ const HexGenerator = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Random Hex Generator">
-        <div className="container flex flex-col items-center justify-center">
+        <div className="container mx-auto flex flex-col items-center justify-center">
           <h1 className="main-heading">Random Hex Gerator</h1>
 
           <div
             style={{ backgroundColor: `#${hexColor}` }}
-            className="mb-12 h-[400px] w-[600px] border"
+            className="mb-12 h-[300px] w-[600px] rounded-md"
           ></div>
 
           <button className="btn-primary" onClick={handleHexColor}>
