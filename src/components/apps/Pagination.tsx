@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { number, string, z } from "zod";
 
 import BackToHome from "../features/BackToHome";
+import Loading from "../features/Loading";
 
 const postSchema = z.object({
   id: number().optional(),
@@ -87,9 +88,7 @@ const Pagination = () => {
           </div>
 
           <div className="w-full rounded-md bg-transparent">
-            {isLoading ? (
-              <h2 className="py-6 text-center text-xl">Loading...</h2>
-            ) : null}
+            {isLoading ? <Loading /> : null}
 
             <div className="flex flex-wrap items-center justify-between gap-6">
               {requiredPosts.length

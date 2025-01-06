@@ -7,6 +7,7 @@ const password = "5487";
 
 const Password = () => {
   const [pin, setPin] = useState<number[]>([]);
+  const [status, setStatus] = useState<string>("");
 
   const handlePinSelection = (num: number) => {
     setPin((prev) => [...prev, num]);
@@ -15,41 +16,44 @@ const Password = () => {
   const checkPassword = () => {
     if (pin.length === 4) {
       if (pin.join("") === password) {
-        console.log("Correct Password");
+        setStatus("Correct Password");
         setPin([]);
       } else {
-        console.log("Incorrect Password");
+        setStatus("Incorrect Password");
         setPin([]);
       }
     }
   };
 
+  const resetPassword = () => {
+    setPin([]);
+    setStatus("");
+  };
+
   return (
     <section className="section">
-      <div className="container mx-auto mx-auto">
+      <div className="container mx-auto">
         <BackButton />
         <div className="flex flex-col ">
-          <h2 className="mb-12 text-center font-serif text-5xl">
-            Check Password
-          </h2>
-          <p className="mx-auto my-12 h-12 w-1/3 bg-slate-100 px-12 py-2 text-center text-xl">
-            {pin}
+          <h2 className="main-heading">Check Password</h2>
+          <p className="mx-auto my-12 flex h-12 w-1/3 items-center justify-center rounded-md bg-blue-100 px-12 py-2 text-center text-xl">
+            {status ? status : pin}
           </p>
-          <div className="mx-auto flex w-[35%] flex-wrap items-center gap-2">
+          <div className="mx-auto flex w-[35%] flex-wrap items-center justify-center gap-2">
             {numbers?.map((number) => (
               <button
                 key={number}
-                className="app-link w-[30%]"
+                className="btn-link w-[30%]"
                 onClick={() => handlePinSelection(number)}
               >
                 {number}
               </button>
             ))}
-            <button
-              className="app-link w-[30%] bg-slate-800"
-              onClick={checkPassword}
-            >
+            <button onClick={checkPassword} className="btn-link2 w-[30%]">
               Submit
+            </button>
+            <button onClick={resetPassword} className="btn-link2 w-[30%]">
+              Reset
             </button>
           </div>
         </div>

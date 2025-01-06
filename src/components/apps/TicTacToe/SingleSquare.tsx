@@ -8,7 +8,7 @@ const SingleSquare = ({ id, handleClick, squares }: SingleSquareProps) => {
   return (
     <div
       onClick={handleClick}
-      className="flex h-20 w-20 items-center justify-center border border-slate-200 bg-amber-100"
+      className="flex h-20 w-20 items-center justify-center border border-blue-200 bg-blue-600 text-white "
     >
       {squares[id]}
     </div>

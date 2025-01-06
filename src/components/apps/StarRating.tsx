@@ -23,14 +23,14 @@ const StarRating = ({ stars }: { stars: number }) => {
               return (
                 <svg
                   key={idx}
-                  stroke="goldenrod"
+                  stroke="white"
                   viewBox="0 0 24 24"
                   className="h-8 w-8"
                   onMouseLeave={handleMouseLeave}
                   onClick={() => handleClick(idx)}
                   xmlns="http://www.w3.org/2000/svg"
                   onMouseEnter={() => handleMouseEnter(idx)}
-                  fill={idx <= (hover || rating) ? "goldenrod" : "transparent"}
+                  fill={idx <= (hover || rating) ? "white" : "transparent"}
                 >
                   <path
                     fillRule="evenodd"

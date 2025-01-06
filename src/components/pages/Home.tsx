@@ -59,9 +59,7 @@ const Home = () => {
           <Link to="pagination-limit" className="btn-link">
             Pagination with Limit
           </Link>
-          <Link to="todolist" className="btn-link">
-            TODO List
-          </Link>
+
           <Link to="checked-todolist" className="btn-link">
             Checked TODOList
           </Link>

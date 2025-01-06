@@ -31,8 +31,8 @@ const PaginationWithLimit = () => {
       setTotalPages(Math.ceil(data?.total / 12));
       setProducts(data?.products);
     } catch (error) {
-      console.error(error);
-      setError(error.message);
+      if (error instanceof Error) setError(error.message);
+      else setError(error as string);
     } finally {
       setIsLoading(false);
     }

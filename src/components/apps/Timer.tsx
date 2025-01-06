@@ -36,13 +36,11 @@ const Timer = () => {
   };
 
   const resetTimer = () => {
-    if (timerID !== null) {
-      clearInterval(timerID);
-      setHours(0);
-      setMinutes(0);
-      setSeconds(0);
-      setTimerID(null);
-    }
+    clearInterval(timerID!);
+    setHours(0);
+    setMinutes(0);
+    setSeconds(0);
+    setTimerID(null);
   };
 
   useEffect(() => {
@@ -57,7 +55,8 @@ const Timer = () => {
     <>
       <BackToHome />
       <section aria-labelledby="Timer">
-        <div className="container mx-auto mx-auto flex flex-col items-center justify-center">
+        <div className="container mx-auto flex flex-col items-center justify-center">
+          <h1 className="main-heading">Timer</h1>
           <div className="flex items-center gap-2">
             <span className="text-3xl">{hours < 10 ? `0${hours}` : hours}</span>
             <span className="text-3xl">:</span>
@@ -70,23 +69,14 @@ const Timer = () => {
             </span>
           </div>
 
-          <div className="mt-12 flex items-center gap-2">
-            <button
-              className="rounded-md bg-slate-600 px-8 py-2 text-white"
-              onClick={startTimer}
-            >
+          <div className="mt-12 flex items-center gap-4">
+            <button onClick={startTimer} className="btn-primary">
               Start Timer
             </button>
-            <button
-              onClick={resetTimer}
-              className="rounded-md bg-slate-600 px-8 py-2 text-white"
-            >
+            <button onClick={resetTimer} className="btn-primary">
               Reset Timer
             </button>
-            <button
-              onClick={pauseTimer}
-              className="rounded-md bg-slate-600 px-8 py-2 text-white"
-            >
+            <button onClick={pauseTimer} className="btn-primary">
               Pause Timer
             </button>
           </div>

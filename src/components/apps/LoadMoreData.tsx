@@ -52,7 +52,7 @@ const LoadMoreData = () => {
       <section aria-labelledby="Products Load More">
         <div className="container mx-auto">
           <div className="mb-12 flex flex-col items-center justify-center gap-8 text-center">
-            <h2 className="text-4xl font-semibold">Load More Data</h2>
+            <h2 className="main-heading">Load More Data</h2>
           </div>
           {isError ? (
             <h2 className="mt-5 font-bold">Something went wrong!</h2>
@@ -62,10 +62,10 @@ const LoadMoreData = () => {
             {todosBatch?.map((todo: TodoProps) => (
               <div
                 key={todo.id}
-                className="flex flex-col gap-3 border border-black px-4 py-6 text-center"
+                className="flex flex-col gap-3 rounded-md bg-blue-500 px-4 py-6 text-center text-white"
               >
                 <span>{todo.id}</span>
-                <h3 className="line-clamp-1 text-lg font-medium">
+                <h3 className="line-clamp-1 text-xl font-bold text-black">
                   {todo.title}
                 </h3>
                 <p className="line-clamp-3 text-sm">{todo.body}</p>
@@ -73,7 +73,7 @@ const LoadMoreData = () => {
             ))}
           </div>
           <div className="flex items-center justify-center gap-3">
-            <button className="btn-link mt-20" onClick={handleMore}>
+            <button className="btn-primary mt-20" onClick={handleMore}>
               {currentBatch === totalBatches ? "No More Data" : "Load More"}
             </button>
           </div>

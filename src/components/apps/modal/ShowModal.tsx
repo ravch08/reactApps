@@ -7,14 +7,14 @@ const ShowModal = () => {
   const [displayModal, setDisplayModal] = useState(false);
 
   const handleDisplayModal = () => setDisplayModal(true);
-
   const handleCloseModal = () => setDisplayModal(false);
 
   return (
     <>
       <BackToHome />
       <section aria-labelledby="Modal">
-        <div className="container mx-auto flex items-center justify-center">
+        <div className="container mx-auto flex flex-col items-center justify-center">
+          <h1 className="main-heading">Modal</h1>
           <button className="btn-link" onClick={handleDisplayModal}>
             Open Modal
           </button>

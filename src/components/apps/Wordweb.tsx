@@ -2,9 +2,14 @@ import { useEffect, useState } from "react";
 
 import BackButton from "../features/BackToHome.tsx";
 
+export type MeaningProps = {
+  definition: string;
+  example: string;
+};
+
 const Wordweb = () => {
+  const [meaning, setMeaning] = useState<MeaningProps | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
-  const [meaning, setMeaning] = useState("");
 
   useEffect(() => {
     const options = {
@@ -37,18 +42,15 @@ const Wordweb = () => {
     getMeaning();
   }, [searchTerm]);
 
-  const meaningClass = meaning
-    ? "mt-12 w-2/4 rounded-lg bg-amber-200 p-8"
-    : "d-none";
-
   return (
     <section className="section">
-      <div className="container mx-auto mx-auto h-[60vh]">
+      <div className="container mx-auto h-[60vh]">
         <BackButton />
         <div className="flex flex-col items-center">
-          <h2 className="mb-12 text-center font-serif text-5xl">WORDWEB</h2>
+          <h2 className="main-heading">WORDWEB</h2>
+
           <form className="w-2/4 text-center">
-            <div className="form-control flex items-center justify-between">
+            <div className="flex items-center justify-center gap-4">
               <label htmlFor="searchWord">
                 <strong>Search a Word:</strong>
               </label>
@@ -59,18 +61,24 @@ const Wordweb = () => {
                 value={searchTerm}
                 placeholder="Enter here..."
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="ml-6 w-[75%] rounded-md bg-slate-200 px-4 py-2"
+                className="input-primary w-2/3"
               />
             </div>
           </form>
 
-          <div className={meaningClass}>
-            <p>
-              <strong>Defintion:</strong> {meaning?.definition || "Searching"}
-            </p>
-            <p>
-              <strong>Example:</strong> {meaning?.example || "Searching"}
-            </p>
+          <div className="mt-12 flex w-2/4 flex-col items-start gap-4 rounded-lg bg-blue-200 p-8">
+            {meaning ? (
+              <>
+                <p>
+                  <strong>Defintion:</strong> {meaning?.definition}
+                </p>
+                <p>
+                  <strong>Example:</strong> {meaning?.example}
+                </p>
+              </>
+            ) : (
+              <p>Searching...</p>
+            )}
           </div>
         </div>
       </div>

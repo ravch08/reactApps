@@ -19,15 +19,19 @@ const QRCodeGenerator = () => {
       <BackHome />
       <section aria-labelledby="QR Code Generator" className="mt-24">
         <div className="container mx-auto flex flex-col items-center">
-          <form className="mb-24 flex items-center gap-4">
+          <form className="mx-auto mb-24 flex w-1/2 items-center justify-center gap-2">
             <input
               autoFocus
               type="text"
               value={inputVal}
-              className="border-none bg-slate-200 px-3 py-2 outline-none"
+              className="input-primary w-1/2"
               onChange={(e) => setInputVal(e.target.value)}
             />
-            <button type="submit" className="btn-link" onClick={generateQRCode}>
+            <button
+              type="submit"
+              className="btn-submit"
+              onClick={generateQRCode}
+            >
               Generate QR Code
             </button>
           </form>

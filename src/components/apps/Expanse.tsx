@@ -59,29 +59,37 @@ const Expanse = () => {
                 onChange={(e) => setExpanseItem(e.target.value)}
               />
             </div>
-            <button type="submit" className="btn-link mt-8 text-sm">
+            <button type="submit" className="btn-primary mt-8">
               Add Expanse
             </button>
           </form>
 
-          <div className="mx-auto w-1/2 bg-slate-100">
+          <div className="mx-auto w-1/2 rounded-md bg-blue-500 text-white">
             <table className="w-full">
-              <tr>
-                <th className="w-1/2 p-2 font-semibold">Expanse Item</th>
-                <th className="w-1/2 p-2 font-semibold">Expanse Amount</th>
-              </tr>
-              {expanse.length > 0
-                ? expanse?.map((exp) => (
-                    <tr>
-                      <td className="border border-slate-300 p-2 text-center text-sm">
-                        {exp?.expItem}
-                      </td>
-                      <td className="border border-slate-300 p-2 text-center text-sm">
-                        {exp?.expAmount}
-                      </td>
-                    </tr>
-                  ))
-                : null}
+              <thead>
+                <tr>
+                  <th className="w-1/2 border border-blue-100 bg-blue-800 p-2 font-semibold">
+                    Expanse Item
+                  </th>
+                  <th className="w-1/2 border border-blue-100 bg-blue-800 p-2 font-semibold">
+                    Expanse Amount
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {expanse.length > 0
+                  ? expanse?.map((exp) => (
+                      <tr key={exp.expItem}>
+                        <td className="border border-blue-100 p-2 text-center text-sm">
+                          {exp?.expItem}
+                        </td>
+                        <td className="border border-blue-100 p-2 text-center text-sm">
+                          {exp?.expAmount}
+                        </td>
+                      </tr>
+                    ))
+                  : null}
+              </tbody>
             </table>
           </div>
         </div>

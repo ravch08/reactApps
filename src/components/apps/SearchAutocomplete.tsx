@@ -51,7 +51,7 @@ const SearchAutocomplete = () => {
             </p>
           ) : null}
 
-          <div className="mt-12 w-1/2">
+          <div className="mx-auto mt-12 w-1/2">
             <input
               autoFocus
               type="text"

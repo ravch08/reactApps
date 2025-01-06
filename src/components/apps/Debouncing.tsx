@@ -43,7 +43,7 @@ const Debouncing = () => {
               value={searchTerm}
               placeholder="Enter Search term..."
               onChange={(e) => setSearchterm(e.target.value)}
-              className="w-72 rounded-md bg-slate-200 px-3 py-2 text-sm"
+              className="input-primary w-72"
             />
 
             <div className="mt-12 flex items-center gap-4">

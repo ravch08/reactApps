@@ -17,6 +17,19 @@ section {
 .btn-link {
   @apply rounded-md bg-blue-600 px-4 py-3 text-center text-white transition-colors duration-300 ease-in-out hover:bg-blue-400;
 }
+
+.btn-link2 {
+  @apply rounded-md bg-blue-800 px-4 py-3 text-center text-white transition-colors duration-300 ease-in-out hover:bg-blue-900;
+}
+
+.btn-submit {
+  @apply rounded-md bg-blue-600 px-4 py-3 text-center text-sm text-white transition-colors duration-300 ease-in-out hover:bg-blue-400;
+}
+
+.btn-back {
+  @apply fixed right-10 top-5 z-50 rounded-md bg-blue-300 px-6 py-3 text-sm;
+}
+
 .btn-option {
   @apply w-full cursor-pointer rounded-md bg-blue-500 px-12 py-2 text-white transition-colors duration-500 ease-in-out hover:bg-blue-900;
 }
@@ -37,10 +50,6 @@ section {
   @apply bg-red-800;
 }
 
-.btn-back {
-  @apply absolute right-10 top-5 z-50 rounded-md bg-blue-300 px-6 py-3 text-sm;
-}
-
 .answer {
   @apply translate-x-4 transition-transform duration-500 ease-in-out;
 }
@@ -54,7 +63,7 @@ section {
 }
 
 .input-primary {
-  @apply rounded-md bg-slate-300 px-2 py-2 text-sm outline-none;
+  @apply rounded-md bg-slate-300 px-2 py-3 text-sm outline-none;
 }
 
 .search-res {

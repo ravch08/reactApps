@@ -24,7 +24,6 @@ import {
   Layout,
   LazyLoading,
   LoadMoreData,
-  LoginUsingContext,
   MemoryGame,
   NavTabs,
   Page404,
@@ -42,10 +41,8 @@ import {
   StarRating,
   TicTacToe,
   Timer,
-  TodoList,
   Wordweb,
 } from "./components/utils/helper";
-import { AuthProvider } from "./context/AuthContext";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -66,7 +63,6 @@ const router = createBrowserRouter(
       <Route path="pagination-limit" element={<PaginationWithLimit />} />
       <Route path="scroll-indicator" element={<ScrollIndicator />} />
       <Route path="qr-code" element={<QRCodeGenerator />} />
-      <Route path="todolist" element={<TodoList />} />
       <Route path="interactive-grid" element={<InteractiveGrid />} />
       <Route path="checked-todolist" element={<CheckedTodoList />} />
       <Route path="rating" element={<StarRating stars={5} />} />
@@ -85,14 +81,6 @@ const router = createBrowserRouter(
       <Route path="tic-tac-toe" element={<TicTacToe />} />
       <Route path="lazy-loading" element={<LazyLoading />} />
       <Route path="carousel-reducer" element={<CarouselUsingReducer />} />
-      <Route
-        path="login-using-context"
-        element={
-          <AuthProvider>
-            <LoginUsingContext />
-          </AuthProvider>
-        }
-      />
       <Route path="*" element={<Page404 />} />
     </Route>,
   ),

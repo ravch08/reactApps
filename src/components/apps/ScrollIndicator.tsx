@@ -49,8 +49,8 @@ const ScrollIndicator = () => {
       <BackHome />
       <div
         aria-labelledby="scroll Indicator"
-        className={`sticky left-0 top-0 z-20 h-[10px] bg-amber-600`}
         style={{ width: `${scrolledPercent}%` }}
+        className={`sticky left-0 top-20 z-50 h-[10px] bg-blue-600`}
       ></div>
       <div
         aria-labelledby="scroll Indicator bg"

@@ -118,7 +118,10 @@ const TicTacToe = () => {
 
         <div className="mt-12 text-center">
           <p className="mb-12 text-center text-xl font-semibold">{status}</p>
-          <button className="btn-link inline-block" onClick={handleResetGame}>
+          <button
+            className="btn-primary inline-block  "
+            onClick={handleResetGame}
+          >
             Restart the Game
           </button>
         </div>

@@ -34,10 +34,10 @@ const CheckedTodolist = () => {
 
   return (
     <section className="section">
-      <div className="container mx-auto mx-auto h-[80vh]">
+      <div className="container mx-auto h-[80vh]">
         <BackButton />
         <div className="mx-auto flex w-1/2 flex-col items-center justify-center">
-          <h2 className="mb-12 text-2xl font-semibold">TO-DO LIST</h2>
+          <h2 className="main-heading">TO-DO LIST</h2>
 
           <form className="mb-12">
             <label htmlFor="todoItem" className="font-semibold">
@@ -62,30 +62,31 @@ const CheckedTodolist = () => {
             </button>
           </form>
 
-          <div className="flex w-full flex-col items-center gap-4">
+          <div className="flex w-full flex-col items-center gap-2">
             {itemsList && itemsList?.length > 0 ? (
               itemsList?.map((item, idx) => (
                 <div
                   key={uuid()}
                   onChange={() => toggleCheckBox(idx)}
-                  className="flex w-full items-center justify-between gap-2 rounded-md bg-slate-400 px-6 py-2 text-white"
+                  className="flex w-full items-center justify-between gap-2 rounded-md bg-blue-400 px-4 py-2 text-white"
                 >
                   <div className="flex items-center gap-4">
                     <input
                       type="checkbox"
+                      className="size-4"
                       onChange={() => {}}
                       checked={checkedItems.includes(idx)}
                     />
                     <p>{item}</p>
                   </div>
+
                   <button
-                    className={
+                    className={`cursor-pointer rounded-md p-2 transition-colors duration-300 ease-in-out ${
                       checkedItems.includes(idx)
-                        ? "rounded-md bg-red-800 p-2"
-                        : "rounded-md bg-gray-800 p-2"
-                    }
+                        ? " bg-red-800 hover:bg-red-600"
+                        : " bg-gray-800 hover:bg-gray-600"
+                    }`}
                     disabled={!checkedItems.includes(idx)}
-                    // className="rounded-md bg-red-800 p-2"
                     onClick={() => deleteTodoItem(idx)}
                   >
                     <svg
@@ -104,7 +105,9 @@ const CheckedTodolist = () => {
                 </div>
               ))
             ) : (
-              <p className="w-full text-center">No Items Added...</p>
+              <p className="flex h-[200px] w-full items-center justify-center rounded-md bg-blue-400 text-center text-white">
+                No Items Added...
+              </p>
             )}
           </div>
         </div>

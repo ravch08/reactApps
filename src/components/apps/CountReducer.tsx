@@ -53,7 +53,7 @@ const CountReducer = () => {
             id="payload"
             type="number"
             value={payloadNum}
-            className="mb-12 w-24 rounded-md bg-slate-200 p-2"
+            className="input-primary mb-12 w-24"
             onChange={(e) => setPayloadNum(parseInt(e.target.value))}
           />
 
